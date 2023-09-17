@@ -20,7 +20,6 @@ pip install pyspark pandas matplotlib factor-analyzer pingouin seaborn statsmode
 
 - `data/`: This directory contains the dataset(s) used in the project.
 - `notebooks/`: Jupyter notebooks with detailed code examples and explanations.
-- `scripts/`: Python scripts for data preprocessing, factor analysis, and statistical tests.
 - `README.md`: This file, providing an overview of the project.
 
 ## Usage
@@ -39,17 +38,9 @@ pip install pyspark pandas matplotlib factor-analyzer pingouin seaborn statsmode
 
 The `notebooks/` directory contains Jupyter notebooks with step-by-step code explanations and examples:
 
-- `01_data_preprocessing.ipynb`: Data loading and preprocessing.
-- `02_factor_analysis.ipynb`: Factor analysis and assessment.
-- `03_statistical_tests.ipynb`: Various statistical tests and visualizations.
+- `weather_supervised`: Data loading and preprocessing. Linear Regression, BoxCox, Decistion Tree, Regression Tree, Random Forest, XGboost
+- `weather_unsupervised`: Data loading and preprocessing. PCA
 
 ## Contributing
 
 Contributions to this project are welcome. If you find any issues or have suggestions for improvements, please open an issue or create a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
-
-You can customize this README to include more specific details about your project, dataset sources, and any other relevant information.
