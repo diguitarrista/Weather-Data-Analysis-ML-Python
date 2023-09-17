@@ -1,6 +1,6 @@
 # Data Analysis and Modeling with PySpark and Factor Analysis
 
-This project demonstrates data analysis and modeling using PySpark, factor analysis, and various statistical and machine learning libraries. It provides an example of how to load, preprocess, and analyze a dataset, as well as how to perform factor analysis and other statistical tests.
+This project demonstrates data analysis and modeling using PySpark, factor analysis, and various statistical and machine learning libraries. It provides an example of how to load, preprocess, and analyze a dataset, as well as how to perform factor analysis and other statistical tests. The script was written by @diguitarrista for demonstration purposes and is not intended for commercial or academic use.
 
 ```markdown
 ## Data Source
