@@ -3,6 +3,12 @@
 This project demonstrates data analysis and modeling using PySpark, factor analysis, and various statistical and machine learning libraries. It provides an example of how to load, preprocess, and analyze a dataset, as well as how to perform factor analysis and other statistical tests.
 
 ```markdown
+## Data Source
+
+The dataset used in this project was obtained from the Instituto Nacional de Meteorologia (INMET), Brazil's National Institute of Meteorology. You can access historical weather data from the INMET website at the following link:
+
+[INMET Historical Weather Data](https://portal.inmet.gov.br/dadoshistoricos)
+
 ## Getting Started
 
 To get started with this project, you'll need to have Python and the required libraries installed. You can install the necessary libraries using the following commands:
