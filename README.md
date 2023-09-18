@@ -1,47 +1,64 @@
-# Data Analysis and Modeling with PySpark and Factor Analysis
+# Exploratory Data Analysis (EDA) and Statistical Analysis in PySpark and Python
 
-This project demonstrates data analysis and modeling using PySpark, factor analysis, and various statistical and machine learning libraries. It provides an example of how to load, preprocess, and analyze a dataset, as well as how to perform factor analysis and other statistical tests. The script was written by @diguitarrista for demonstration purposes and is not intended for commercial or academic use.
+This README provides an overview of the Python script used for conducting Exploratory Data Analysis (EDA) and various statistical analyses, including factor analysis, correlation analysis, and linear regression. The script utilizes PySpark, Pandas, Matplotlib, FactorAnalyzer, Pingouin, Seaborn, Statsmodels, and Scipy libraries. I'm not using this in an academic level or for commercial purposes. These code are only to demonstrate programming technics and were all written by me (@diguitarrista).
 
-```markdown
-## Data Source
+## Requirements
+Before running the script, make sure you have the following libraries installed:
 
-The dataset used in this project was obtained from the Instituto Nacional de Meteorologia (INMET), Brazil's National Institute of Meteorology. You can access historical weather data from the INMET website at the following link:
+- PySpark
+- Pandas
+- Matplotlib
+- FactorAnalyzer
+- Pingouin
+- Seaborn
+- Statsmodels
+- Scipy
 
-[INMET Historical Weather Data](https://portal.inmet.gov.br/dadoshistoricos)
-
-## Getting Started
-
-To get started with this project, you'll need to have Python and the required libraries installed. You can install the necessary libraries using the following commands:
+You can install these libraries using `pip`:
 
 ```bash
-pip install pyspark pandas matplotlib factor-analyzer pingouin seaborn statsmodels scikit-learn
+pip install pyspark pandas matplotlib factor-analyzer pingouin seaborn statsmodels scipy
 ```
 
-## Project Structure
-
-- `data/`: This directory contains the dataset(s) used in the project.
-- `notebooks/`: Jupyter notebooks with detailed code examples and explanations.
-- `README.md`: This file, providing an overview of the project.
-
 ## Usage
+1. Import the necessary libraries at the beginning of your script:
 
-1. **Data Loading**: The project utilizes PySpark for loading and handling large datasets efficiently. Use the `SparkSession` object to read data.
+```python
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import *
+import pandas as pd
+import matplotlib.pyplot as plt
+from factor_analyzer import FactorAnalyzer
+from factor_analyzer.factor_analyzer import calculate_bartlett_sphericity
+from factor_analyzer.factor_analyzer import calculate_kmo
+import pingouin as pg
+import seaborn as sns
+import numpy as np
+import statsmodels.api as sm
+from statsmodels.iolib.summary2 import summary_col
+from scipy.stats import pearsonr
+from statsmodels.iolib.summary2 import summary_col
+from scipy.stats import boxcox
+from statstests.process import stepwise
+```
 
-2. **Data Preprocessing**: Explore data preprocessing techniques, such as cleaning, handling missing values, and encoding categorical variables using libraries like Pandas and Scikit-Learn.
+2. Create a SparkSession to work with Spark DataFrames if necessary:
 
-3. **Factor Analysis**: Discover how to perform factor analysis using the `factor_analyzer` library. Calculate Bartlett's sphericity and the Kaiser-Meyer-Olkin (KMO) measure to assess data suitability.
+```python
+spark = SparkSession.builder \
+    .appName("YourAppName") \
+    .getOrCreate()
+```
 
-4. **Statistical Tests**: Utilize `pingouin`, `statsmodels`, and `scipy` for various statistical tests, including Pearson correlations, model comparisons, and more.
+3. Load your data into a Spark DataFrame using `spark.read.csv()` or any other suitable method.
 
-5. **Visualization**: Visualize data and analysis results using Matplotlib and Seaborn for creating informative statistical plots.
+4. Perform your EDA, data preprocessing, and statistical analyses using the imported libraries. Make sure to adapt the code to your specific dataset and research questions.
 
-## Notebooks
+5. You can use Matplotlib, Seaborn, and other visualization libraries to create plots and graphs for data visualization.
 
-The `notebooks/` directory contains Jupyter notebooks with step-by-step code explanations and examples:
+6. When you're done with your analysis, you can either display the plots using `plt.show()` or save them to a file using `plt.savefig('plot.png')`.
 
-- `weather_regression`: Data loading and preprocessing. Linear Regression, BoxCox
-- `weather_pca`: Data loading and preprocessing. PCA
+7. Finally, you can run the script using a Python interpreter or an integrated development environment (IDE) like Jupyter Notebook.
 
-## Contributing
-
-Contributions to this project are welcome. If you find any issues or have suggestions for improvements, please open an issue or create a pull request.
+## Note
+This script is a template and should be adapted to your specific data and research requirements. Ensure that you customize the data loading, cleaning, and analysis steps as needed for your project.
