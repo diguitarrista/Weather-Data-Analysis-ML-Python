@@ -39,8 +39,8 @@ pip install pyspark pandas matplotlib factor-analyzer pingouin seaborn statsmode
 
 The `notebooks/` directory contains Jupyter notebooks with step-by-step code explanations and examples:
 
-- `weather_supervised`: Data loading and preprocessing. Linear Regression, BoxCox, Decistion Tree, Regression Tree, Random Forest, XGboost
-- `weather_unsupervised`: Data loading and preprocessing. PCA
+- `weather_linear_regression`: Data loading and preprocessing. Linear Regression, BoxCox
+- `weather_pca`: Data loading and preprocessing. PCA
 
 ## Contributing
 
