@@ -59,4 +59,12 @@ You can follow the order of the notebooks to understand the project flow:
 
 Each notebook includes code, explanations, and visualizations to facilitate understanding.
 
+## Data Source
+
+The dataset used in this project was obtained from the Instituto Nacional de Meteorologia (INMET), Brazil's National Institute of Meteorology. You can access historical weather data from the INMET website at the following link:
+
+[INMET Historical Weather Data](https://portal.inmet.gov.br/dadoshistoricos)
+
+Please note that you may need to register or follow specific procedures on the INMET website to access the data.
+
 ---
